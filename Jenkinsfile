@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 tools {
     maven 'Maven'
 }
@@ -29,7 +28,7 @@ stages {
 
     stage('Run Application') {
         steps {
-            sh 'java -cp target/ImmutableStringProject-1.0-SNAPSHOT.jar com.example.App'
+            sh 'java -cp target/classes com.example.App'
         }
     }
 }
@@ -43,7 +42,7 @@ post {
         echo 'Build Failed'
     }
 }
-```
+
 
 }
 
